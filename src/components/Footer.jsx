@@ -80,35 +80,6 @@ export default function Footer() {
           ))}
         </div>
 
-        {/* Newsletter */}
-        <div className="py-10 border-t" style={{ borderColor:'rgba(255,255,255,.1)' }}>
-          <div className="grid md:grid-cols-2 gap-8 items-center">
-            <div>
-              <h4 className="font-poppins font-bold text-xl text-white mb-2">
-                Stay <span className="text-red-DEFAULT">Informed</span>
-              </h4>
-              <p className="font-inter text-white/50 text-sm">
-                Exclusive insights, event invites, and member success stories — delivered to your inbox.
-              </p>
-            </div>
-            <form onSubmit={sub} className="flex gap-3">
-              <div className="flex-1 relative">
-                <FiMail className="absolute left-3.5 top-1/2 -translate-y-1/2" size={15} style={{ color:'rgba(255,255,255,.35)' }} />
-                <input
-                  type="email" value={email}
-                  onChange={e => setEmail(e.target.value)}
-                  placeholder="Enter your email address"
-                  className="w-full rounded-lg pl-10 pr-4 py-3 font-inter text-sm text-white placeholder-white/30 focus:outline-none focus:ring-2 focus:ring-red-DEFAULT/50 transition-all"
-                  style={{ background:'rgba(255,255,255,.07)', border:'1px solid rgba(255,255,255,.12)' }}
-                />
-              </div>
-              <motion.button type="submit" whileTap={{ scale:.97 }} className="btn-primary whitespace-nowrap shrink-0">
-                {done ? '✓ Done!' : <><span>Subscribe</span><FiArrowRight size={15}/></>}
-              </motion.button>
-            </form>
-          </div>
-        </div>
-
         {/* Bottom bar */}
         <div className="py-6 border-t flex flex-wrap items-center justify-between gap-4" style={{ borderColor:'rgba(255,255,255,.08)' }}>
           <p className="font-inter text-white/35 text-sm">
